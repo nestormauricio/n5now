@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aWv6x5CDsrnEe99gV8KsK5XsuxKakinLdf3BEQr8m71znyJczl/NebQf8pm29jLRTdemaQhhojD4dAQUHnQAQw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nesto\\source\\repos\\n5now_i\\n5now_ii\\n5now_ii.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nesto\\.nuget\\packages\\system.net.http.json\\5.0.0-preview.3.20214.6\\system.net.http.json.5.0.0-preview.3.20214.6.nupkg.sha512"
+  ],
+  "logs": []
+}

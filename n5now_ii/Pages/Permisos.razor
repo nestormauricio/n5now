@@ -1,0 +1,37 @@
+﻿@page "/permisos"
+
+@using System.Net.Http
+@using System.Net.Http.Json
+@using n5now_ii.Data
+
+@inject HttpClient Http
+
+<h3>Permisos</h3>
+
+<table class="table">
+    @if (oRespuesta != null && oRespuesta.Data != null)
+    {
+        @* @foreach (var oElement in (List<Permiso>)oRespuesta.Data) *@
+        @foreach (var oElement in oRespuesta.Data)
+        {
+            <tr>
+                <td>@oElement.Id</td>
+                <td>@oElement.NombreEmpleado</td>
+                <td>@oElement.ApellidoEmpleado</td>
+                <td>@oElement.TipoPermiso</td>
+                <td>@oElement.FechaPermiso</td>
+            </tr>
+        }
+
+    }
+</table>
+
+@code {
+    // public string URL = "https://localhost:44382/api/Permisos";
+    public string Url = "api/Permisos";
+
+    public Data.Respuesta oRespuesta = new Data.Respuesta();
+
+    protected override async Task OnInitializedAsync() =>
+        oRespuesta = await Http.GetFromJsonAsync<Respuesta>(Url);
+}
